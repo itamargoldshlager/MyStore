@@ -29,14 +29,25 @@ const useStyles = makeStyles((theme: Theme) =>
 );
 
 export interface ProductProps {
-    src: string,
-    title: string,
-    channel:string,
-    views: string,
-    createdAt:string,
+    id: number,
+    imageSrc: string,
+    name: string,
+    description: string,
+    price: number,
+    category: string,
+    isAvailable: boolean
 }
 
-const SingleProductRow: FC<ProductProps> = ({src, title, channel, views, createdAt}) => {
+const SingleProductRow: FC<ProductProps> = (
+    {
+        id,
+        imageSrc,
+        name,
+        description,
+        price,
+        category,
+        isAvailable
+    }) => {
     const classes = useStyles();
 
     return (
@@ -45,25 +56,25 @@ const SingleProductRow: FC<ProductProps> = ({src, title, channel, views, created
                 <Grid container spacing={2}>
                     <Grid item>
                         <ButtonBase className={classes.image}>
-                            <img className={classes.img} alt="complex" src={src} />
+                            <img className={classes.img} alt="complex" src={imageSrc} />
                         </ButtonBase>
                     </Grid>
                     <Grid item xs={12} sm container>
                         <Grid item xs container direction="column" spacing={2}>
                             <Grid item xs>
                                 <Typography gutterBottom variant="subtitle1">
-                                    {title}
+                                    {name}
                                 </Typography>
                                 <Typography variant="body2" gutterBottom>
-                                    {channel}
+                                    {description}
                                 </Typography>
                                 <Typography variant="body2" color="textSecondary">
-                                    {views}
+                                    {category}
                                 </Typography>
                             </Grid>
                         </Grid>
                         <Grid item>
-                            <Typography variant="subtitle1">$19.00</Typography>
+                            <Typography variant="subtitle1">${price}</Typography>
                         </Grid>
                     </Grid>
                 </Grid>

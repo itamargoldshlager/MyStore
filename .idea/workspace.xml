@@ -2,33 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="007fdf64-d001-4fba-b995-8ef693306fde" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/cloudstore.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MyStore/Components/GenericTable/GenericTable.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MyStore/Components/GenericTable/TablePagingAction.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MyStore/Components/Home/Home.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MyStore/Components/Orders/SingleOrderRow.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MyStore/Components/Orders/TableOrder.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MyStore/Components/Products/SingleProductRow.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MyStore/Components/Products/TableProduct.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MyStore/Components/SideBarList/SideBarList.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MyStore/Components/template.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MyStore/MyStore.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/react-app-env.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/serviceWorker.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/setupTests.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MyStore/Components/GenericTable/GenericTable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyStore/Components/GenericTable/GenericTable.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MyStore/Components/Products/SingleProductRow.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyStore/Components/Products/SingleProductRow.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MyStore/Components/Products/TableProduct.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyStore/Components/Products/TableProduct.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MyStore/Components/Router/RouterPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyStore/Components/Router/RouterPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MyStore/Components/SideBarList/SideBarList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyStore/Components/MainPage/SideBarList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MyStore/Components/template.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyStore/Components/template.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MyStore/MyStore.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyStore/MyStore.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,8 +22,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="TypeScript File" />
         <option value="TypeScript JSX File" />
+        <option value="CSS File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -59,10 +43,16 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="ts.external.directory.path" value="D:\colman\cloudstore\node_modules\typescript\lib" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\colman\cloudstore\src\MyStore\Components\MainPage" />
+    </key>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -88,12 +78,31 @@
       <updated>1578678251018</updated>
       <workItem from="1578678261772" duration="16739000" />
       <workItem from="1578741923011" duration="1391000" />
-      <workItem from="1578743335735" duration="600000" />
+      <workItem from="1578743335735" duration="719000" />
+      <workItem from="1578763029089" duration="6061000" />
+      <workItem from="1578858408775" duration="3954000" />
     </task>
+    <task id="LOCAL‎00001" summary="hi">
+      <created>1578743987659</created>
+      <option name="number" value="LOCAL‎00001" />
+      <option name="presentableId" value="LOCAL‎00001" />
+      <updated>1578743987659</updated>
+    </task>
+    <task id="LOCAL‎00002" summary="hi">
+      <created>1578763147436</created>
+      <option name="number" value="LOCAL‎00002" />
+      <option name="presentableId" value="LOCAL‎00002" />
+      <updated>1578763147436</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="hi" />
+    <option name="LAST_COMMIT_MESSAGE" value="hi" />
   </component>
   <component name="WindowStateProjectService">
     <state x="488" y="78" key="#com.intellij.ide.util.MemberChooser" timestamp="1578701271321">
@@ -104,10 +113,18 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="109" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1578686626994" />
-    <state x="308" y="0" key="CommitChangelistDialog2" timestamp="1578743966640">
+    <state x="308" y="0" key="CommitChangelistDialog2" timestamp="1578763144595">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="308" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1578743966640" />
+    <state x="308" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1578763144595" />
+    <state x="471" y="84" key="RollbackChangesDialog" timestamp="1578764233038">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="471" y="84" key="RollbackChangesDialog/0.0.1366.728@0.0.1366.728" timestamp="1578764233038" />
+    <state x="275" y="95" key="Vcs.Push.Dialog.v2" timestamp="1578743990823">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="95" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1578743990822" />
     <state x="339" y="157" key="run.anything.popup" timestamp="1578701605110">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

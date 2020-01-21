@@ -12,32 +12,35 @@ import SportsFootballIcon from '@material-ui/icons/SportsFootball';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import AssignmentIcon from '@material-ui/icons/Assignment';
 import StorageIcon from '@material-ui/icons/Storage';
+import {Link,} from "react-router-dom";
+
+import "./linkStyle.css"
 
 const SideBarList: FC = () => {
     return (
         <div className="App">
             <List>
                 <ListItem button>
-                    <ListItemIcon><TvIcon/></ListItemIcon>
-                    <ListItemText primary="Televisions" />
+                    <ListItemIcon><Link to="/products/Televisions" className="LinkStyle"><TvIcon/></Link></ListItemIcon>
+                    <Link to="/products/Televisions" className="LinkStyle"><ListItemText primary="Televisions"/></Link>
                 </ListItem>
                 <ListItem button>
-                    <ListItemIcon><AndroidIcon/></ListItemIcon>
-                    <ListItemText primary="Cellphones" />
-                </ListItem>
-
-                <ListItem button>
-                    <ListItemIcon><ComputerIcon/></ListItemIcon>
-                    <ListItemText primary="Computers" />
+                    <ListItemIcon><Link to="/products/Cellphones" className="LinkStyle"><AndroidIcon/></Link></ListItemIcon>
+                    <Link to="/products/Cellphones" className="LinkStyle"><ListItemText primary="Cellphones" /></Link>
                 </ListItem>
 
                 <ListItem button>
-                    <ListItemIcon><HeadsetIcon/></ListItemIcon>
-                    <ListItemText primary="Headset" />
+                    <ListItemIcon><Link to="/products/Computers" className="LinkStyle"><ComputerIcon/></Link></ListItemIcon>
+                    <Link to="/products/Computers" className="LinkStyle"><ListItemText primary="Computers" /></Link>
+                </ListItem>
+
+                <ListItem button>
+                    <ListItemIcon><Link to="/products/Headset" className="LinkStyle"><HeadsetIcon/></Link></ListItemIcon>
+                    <Link to="/products/Headset" className="LinkStyle"><ListItemText primary="Headset" /></Link>
                 </ListItem>
                 <ListItem button>
-                    <ListItemIcon><SportsFootballIcon/></ListItemIcon>
-                    <ListItemText primary="Sport" />
+                    <ListItemIcon><Link to="/products/Sport" className="LinkStyle"><SportsFootballIcon/></Link></ListItemIcon>
+                    <Link to="/products/Sport" className="LinkStyle"><ListItemText primary="Sport" /></Link>
                 </ListItem>
 
             </List>

@@ -51,38 +51,43 @@ const GenericTable: FC<GenericTableProps> = ({rows, rowComponent}) => {
     // @ts-ignore
     // @ts-ignore
     return (
-        <TableContainer component={Paper}>
-            <Table className={classes.table} aria-label="custom pagination table">
-                <TableHead>
-                    <TableRow>
-                        <TablePagination
-                            rowsPerPageOptions={[5, 10, 25, { label: 'All', value: -1 }]}
-                            colSpan={3}
-                            count={rows.length}
-                            rowsPerPage={rowsPerPage}
-                            page={page}
-                            SelectProps={{
-                                inputProps: { 'aria-label': 'rows per page' },
-                                native: true,
-                            }}
-                            onChangePage={handleChangePage}
-                            onChangeRowsPerPage={handleChangeRowsPerPage}
-                            ActionsComponent={TablePaginationActions}
-                        />
-                    </TableRow>
-                </TableHead>
-                <TableBody>
-                    {
-                        rowComponent({...rowsToDisplay})
-                    }
-                    {emptyRows > 0 && (
-                        <TableRow style={{ height: 53 * emptyRows }}>
-                            <TableCell colSpan={6} />
+        <div>
+        {(rows.length === 0) ?
+            <h1>There is not object to display</h1> :
+            <TableContainer component={Paper}>
+                <Table className={classes.table} aria-label="custom pagination table">
+                    <TableHead>
+                        <TableRow>
+                            <TablePagination
+                                rowsPerPageOptions={[5, 10, 25, { label: 'All', value: -1 }]}
+                                colSpan={3}
+                                count={rows.length}
+                                rowsPerPage={rowsPerPage}
+                                page={page}
+                                SelectProps={{
+                                    inputProps: { 'aria-label': 'rows per page' },
+                                    native: true,
+                                }}
+                                onChangePage={handleChangePage}
+                                onChangeRowsPerPage={handleChangeRowsPerPage}
+                                ActionsComponent={TablePaginationActions}
+                            />
                         </TableRow>
-                    )}
-                </TableBody>
-            </Table>
-        </TableContainer>
+                    </TableHead>
+                    <TableBody>
+                        {
+                            rowComponent({...rowsToDisplay})
+                        }
+                        {emptyRows > 0 && (
+                            <TableRow style={{ height: 53 * emptyRows }}>
+                                <TableCell colSpan={6} />
+                            </TableRow>
+                        )}
+                    </TableBody>
+                </Table>
+            </TableContainer>
+            }
+        </div>
     );
 };
 

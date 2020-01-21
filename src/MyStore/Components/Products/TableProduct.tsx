@@ -7,7 +7,7 @@ const TableOrder: FC<{rows: ProductProps[] | any}> = ({rows}) => {
         <div className="App">
             {
                 rows.map((row: ProductProps) =>
-                    <TableRow key={row.channel}>
+                    <TableRow key={row.id}>
                         <SingleProductRow {...row}/>
                     </TableRow>
                 )
