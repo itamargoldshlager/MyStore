@@ -1,17 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="007fdf64-d001-4fba-b995-8ef693306fde" name="Default Changelist" comment="">
+    <list default="true" id="007fdf64-d001-4fba-b995-8ef693306fde" name="Default Changelist" comment="hi">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyStore/Components/GenericTable/GenericTable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyStore/Components/GenericTable/GenericTable.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyStore/Components/Products/SingleProductRow.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyStore/Components/Products/SingleProductRow.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyStore/Components/Products/TableProduct.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyStore/Components/Products/TableProduct.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyStore/Components/Router/RouterPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyStore/Components/Router/RouterPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyStore/Components/SideBarList/SideBarList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyStore/Components/MainPage/SideBarList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyStore/Components/template.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyStore/Components/template.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyStore/MyStore.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyStore/MyStore.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,6 +72,8 @@
       <workItem from="1578743335735" duration="719000" />
       <workItem from="1578763029089" duration="6061000" />
       <workItem from="1578858408775" duration="3954000" />
+      <workItem from="1579633342340" duration="128000" />
+      <workItem from="1581109871857" duration="1623000" />
     </task>
     <task id="LOCAL‎00001" summary="hi">
       <created>1578743987659</created>
@@ -94,11 +87,34 @@
       <option name="presentableId" value="LOCAL‎00002" />
       <updated>1578763147436</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL‎00003" summary="hi">
+      <created>1579633399324</created>
+      <option name="number" value="LOCAL‎00003" />
+      <option name="presentableId" value="LOCAL‎00003" />
+      <updated>1579633399324</updated>
+    </task>
+    <task id="LOCAL‎00004" summary="hi">
+      <created>1579633451569</created>
+      <option name="number" value="LOCAL‎00004" />
+      <option name="presentableId" value="LOCAL‎00004" />
+      <updated>1579633451569</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="hi" />
@@ -113,18 +129,18 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="109" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1578686626994" />
-    <state x="308" y="0" key="CommitChangelistDialog2" timestamp="1578763144595">
+    <state x="308" y="0" key="CommitChangelistDialog2" timestamp="1581110795268">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="308" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1578763144595" />
+    <state x="308" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1581110795268" />
     <state x="471" y="84" key="RollbackChangesDialog" timestamp="1578764233038">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="471" y="84" key="RollbackChangesDialog/0.0.1366.728@0.0.1366.728" timestamp="1578764233038" />
-    <state x="275" y="95" key="Vcs.Push.Dialog.v2" timestamp="1578743990823">
+    <state x="275" y="95" key="Vcs.Push.Dialog.v2" timestamp="1579633402464">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="95" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1578743990822" />
+    <state x="275" y="95" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1579633402464" />
     <state x="339" y="157" key="run.anything.popup" timestamp="1578701605110">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
