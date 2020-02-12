@@ -3,33 +3,35 @@ import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
+import useStyles from "../GenericTable/GenericTableStyle"
+import { ButtonBase } from '@material-ui/core';
 
-const useStyles = makeStyles((theme: Theme) =>
-    createStyles({
-        root: {
-            flexGrow: 1,
-        },
-        paper: {
-            padding: theme.spacing(2),
-            margin: 'auto',
-            maxWidth: 500,
-        },
-    }),
-);
-
-export interface OrderProps {
-    totalPrice: string,
-    date: Date,
-    status :string,
+export enum OrderState{
+    Done = 'Done',
+    Open = 'Open',
+    Canceled = 'Canceled'
 }
 
-const SingleOrderRow: FC<OrderProps> = ({date, status, totalPrice}) => {
+export interface OrderProps {
+    totalPrice: number,
+    date: Date,
+    status: OrderState,
+    id: number,
+    imageSrc: string
+}
+
+const SingleOrderRow: FC<OrderProps> = ({date, status, totalPrice, imageSrc}) => {
     const classes = useStyles();
 
     return (
-        <div className={classes.root}>
+        <div>
             <Paper className={classes.paper}>
-                <Grid container>
+                <Grid container spacing={2}>
+                    <Grid item>
+                        <ButtonBase className={classes.image}>
+                            <img className={classes.img} src={imageSrc} />
+                        </ButtonBase>
+                    </Grid>
                     <Grid item xs={12} sm container>
                         <Grid item xs container direction="column" spacing={2}>
                             <Grid item xs>

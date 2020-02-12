@@ -4,77 +4,67 @@ import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import ButtonBase from '@material-ui/core/ButtonBase';
-
-const useStyles = makeStyles((theme: Theme) =>
-    createStyles({
-        root: {
-            flexGrow: 1,
-        },
-        paper: {
-            padding: theme.spacing(2),
-            margin: 'auto',
-            maxWidth: 500,
-        },
-        image: {
-            width: 128,
-            height: 128,
-        },
-        img: {
-            margin: 'auto',
-            display: 'block',
-            maxWidth: '100%',
-            maxHeight: '100%',
-        },
-    }),
-);
-
+import useStyles from "../GenericTable/GenericTableStyle"
+import { Button } from '@material-ui/core';
+import {Link} from "react-router-dom";
 export interface ProductProps {
     id: number,
-    imageSrc: string,
     name: string,
     description: string,
     price: number,
-    category: string,
-    isAvailable: boolean
+    amount: number
+    removeFromCart?: () => void
 }
 
 const SingleProductRow: FC<ProductProps> = (
     {
         id,
-        imageSrc,
         name,
         description,
         price,
-        category,
-        isAvailable
+        amount,
+        removeFromCart
     }) => {
     const classes = useStyles();
 
     return (
-        <div className={classes.root}>
+        <div>
             <Paper className={classes.paper}>
                 <Grid container spacing={2}>
                     <Grid item>
                         <ButtonBase className={classes.image}>
-                            <img className={classes.img} alt="complex" src={imageSrc} />
+                            <img className={classes.img} src={"http://localhost:4000/static/" + id + ".png"} />
                         </ButtonBase>
                     </Grid>
                     <Grid item xs={12} sm container>
                         <Grid item xs container direction="column" spacing={2}>
                             <Grid item xs>
-                                <Typography gutterBottom variant="subtitle1">
+                                <Typography gutterBottom>
                                     {name}
-                                </Typography>
-                                <Typography variant="body2" gutterBottom>
-                                    {description}
-                                </Typography>
-                                <Typography variant="body2" color="textSecondary">
-                                    {category}
                                 </Typography>
                             </Grid>
                         </Grid>
                         <Grid item>
-                            <Typography variant="subtitle1">${price}</Typography>
+                            <Typography>${price}</Typography>
+                            <Link to={`/productById/${id}`} className="LinkStyle">
+                                <Button 
+                                    variant="contained" 
+                                    color="default"
+                                >
+                                    view product
+                                </Button>
+                            </Link>
+                            {
+                                removeFromCart !== undefined ?
+                                <Button 
+                                    variant="contained" 
+                                    color="secondary"
+                                    onClick= {() => removeFromCart()}
+                                >
+                                    remove
+                                </Button> :
+                                <></>
+                            }
                         </Grid>
                     </Grid>
                 </Grid>

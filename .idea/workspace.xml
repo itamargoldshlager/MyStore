@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="007fdf64-d001-4fba-b995-8ef693306fde" name="Default Changelist" comment="hi">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MyStore/Components/Router/RouterPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyStore/Components/Router/RouterPage.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +74,8 @@
       <workItem from="1578763029089" duration="6061000" />
       <workItem from="1578858408775" duration="3954000" />
       <workItem from="1579633342340" duration="128000" />
-      <workItem from="1581109871857" duration="1623000" />
+      <workItem from="1581109871857" duration="1976000" />
+      <workItem from="1581163368284" duration="588000" />
     </task>
     <task id="LOCAL‎00001" summary="hi">
       <created>1578743987659</created>
@@ -110,7 +112,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -129,10 +133,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="109" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1578686626994" />
-    <state x="308" y="0" key="CommitChangelistDialog2" timestamp="1581110795268">
+    <state x="308" y="0" key="CommitChangelistDialog2" timestamp="1581112464678">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="308" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1581110795268" />
+    <state x="308" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1581112464678" />
     <state x="471" y="84" key="RollbackChangesDialog" timestamp="1578764233038">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

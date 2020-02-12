@@ -12,7 +12,7 @@ import SportsFootballIcon from '@material-ui/icons/SportsFootball';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import AssignmentIcon from '@material-ui/icons/Assignment';
 import StorageIcon from '@material-ui/icons/Storage';
-import {Link,} from "react-router-dom";
+import {Link} from "react-router-dom";
 
 import "./linkStyle.css"
 
@@ -47,18 +47,18 @@ const SideBarList: FC = () => {
             <Divider />
             <List>
                 <ListItem button>
-                    <ListItemIcon><ShoppingCartIcon/></ListItemIcon>
-                    <ListItemText primary="Shopping Cart"/>
+                    <ListItemIcon><Link to="/shoppingcart" className="LinkStyle"><ShoppingCartIcon/></Link></ListItemIcon>
+                    <Link to="/shoppingcart" className="LinkStyle"><ListItemText primary="Shopping Cart"/></Link>
                 </ListItem>
 
                 <ListItem button>
-                    <ListItemIcon><AssignmentIcon/></ListItemIcon>
-                    <ListItemText primary="Orders"/>
+                    <ListItemIcon><Link to="/orders" className="LinkStyle"><AssignmentIcon/></Link></ListItemIcon>
+                    <Link to="/orders" className="LinkStyle"><ListItemText primary="Orders"/></Link>
                 </ListItem>
 
                 <ListItem button>
-                    <ListItemIcon><StorageIcon/></ListItemIcon>
-                    <ListItemText primary="Storage manage"/>
+                    <ListItemIcon><Link to="/Storage" className="LinkStyle"><StorageIcon/></Link></ListItemIcon>
+                    <Link to="/Storage" className="LinkStyle"><ListItemText primary="Storage manage"/></Link>
                 </ListItem>
             </List>
         </div>

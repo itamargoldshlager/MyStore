@@ -2,7 +2,6 @@ import React, {FC} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
-import TableCell from '@material-ui/core/TableCell';
 import TableContainer from '@material-ui/core/TableContainer';
 import TablePagination from '@material-ui/core/TablePagination';
 import TableRow from '@material-ui/core/TableRow';
@@ -14,7 +13,8 @@ import TablePaginationActions from "./TablePagingAction";
 
 const GenericTableStyle = makeStyles({
     table: {
-        minWidth: 500,
+        width: '500px',
+        margin: 'auto'
     },
 });
 
@@ -27,8 +27,6 @@ const GenericTable: FC<GenericTableProps> = ({rows, rowComponent}) => {
     const classes = GenericTableStyle();
     const [page, setPage] = React.useState(0);
     const [rowsPerPage, setRowsPerPage] = React.useState(5);
-
-    const emptyRows = rowsPerPage - Math.min(rowsPerPage, rows.length - page * rowsPerPage);
 
     const handleChangePage = (event: React.MouseEvent<HTMLButtonElement> | null, newPage: number) => {
         setPage(newPage);
@@ -51,7 +49,7 @@ const GenericTable: FC<GenericTableProps> = ({rows, rowComponent}) => {
     // @ts-ignore
     // @ts-ignore
     return (
-        <div>
+        <div className={classes.table}>
         {(rows.length === 0) ?
             <h1>There is not object to display</h1> :
             <TableContainer component={Paper}>
@@ -78,11 +76,6 @@ const GenericTable: FC<GenericTableProps> = ({rows, rowComponent}) => {
                         {
                             rowComponent({...rowsToDisplay})
                         }
-                        {emptyRows > 0 && (
-                            <TableRow style={{ height: 53 * emptyRows }}>
-                                <TableCell colSpan={6} />
-                            </TableRow>
-                        )}
                     </TableBody>
                 </Table>
             </TableContainer>

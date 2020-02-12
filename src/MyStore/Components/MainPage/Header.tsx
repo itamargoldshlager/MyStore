@@ -58,7 +58,7 @@ const Header: FC<{open: boolean, handleDrawerOpen: () => void}> = ({open, handle
                 >
                     <MenuIcon />
                 </IconButton>
-                <Link to="/home" className="LinkStyle">
+                <Link to="/" className="LinkStyle">
                     <Typography variant="h6" noWrap>
                         MyStore
                     </Typography>
