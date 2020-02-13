@@ -7,8 +7,8 @@ import TablePagination from '@material-ui/core/TablePagination';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import {TableHead} from "@material-ui/core";
-import {OrderProps} from "../Orders/SingleOrderRow";
-import {ProductProps} from "../Products/SingleProductRow"
+import {OrderProps} from "../Orders/OrderRow";
+import {ProductProps} from "../Products/ProductRow"
 import TablePaginationActions from "./TablePagingAction";
 
 const GenericTableStyle = makeStyles({

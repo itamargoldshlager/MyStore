@@ -1,4 +1,4 @@
-import {OrderProps, OrderState} from '../../Components/Orders/SingleOrderRow'
+import {OrderProps, OrderState} from '../../Components/Orders/OrderRow'
 
 const data: OrderProps[] = [
     {

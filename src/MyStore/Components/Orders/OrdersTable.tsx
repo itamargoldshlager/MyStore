@@ -1,8 +1,8 @@
 import React, {FC} from 'react';
-import SingleOrderRow, {OrderProps} from "./SingleOrderRow";
+import SingleOrderRow, {OrderProps} from "./OrderRow";
 import TableRow from "@material-ui/core/TableRow";
 
-const TableOrder: FC<{rows: OrderProps[] | any}> = ({rows}) => {
+const OrdersTable: FC<{rows: OrderProps[] | any}> = ({rows}) => {
     return (
         <div className="App">
             {
@@ -16,4 +16,4 @@ const TableOrder: FC<{rows: OrderProps[] | any}> = ({rows}) => {
     );
 };
 
-export default TableOrder;
+export default OrdersTable;

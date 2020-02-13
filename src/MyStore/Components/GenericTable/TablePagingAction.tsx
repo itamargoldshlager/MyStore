@@ -1,4 +1,4 @@
-import React, {FC} from "react";
+import React from "react";
 import {createStyles, makeStyles, Theme, useTheme} from "@material-ui/core/styles";
 import IconButton from "@material-ui/core/IconButton";
 import LastPageIcon from "@material-ui/icons/LastPage";

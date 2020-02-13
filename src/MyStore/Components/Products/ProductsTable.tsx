@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
 import TableRow from "@material-ui/core/TableRow";
-import SingleProductRow, {ProductProps} from "./SingleProductRow"
+import SingleProductRow, {ProductProps} from "./ProductRow"
 
 const TableOrder: FC<{rows: ProductProps[] | any}> = ({rows}) => {
     return (

@@ -1,5 +1,5 @@
 import React, {FC} from 'react';
-import {ProductProps} from "../Products/SingleProductRow"
+import {ProductProps} from "./ProductRow"
 import { Grid, Button } from '@material-ui/core';
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import axios from 'axios';
@@ -47,7 +47,7 @@ const SinglePage: FC<ProductProps> = ({id, name, description, amount, price}) =>
             <Grid className={classes.root} container spacing={2}>
                 <Grid item>
                     <div className={classes.image}>
-                        <img className={classes.img} src={"http://localhost:4000/static/" + id + ".png"} />
+                        <img className={classes.img} src={"http://localhost:4000/static/" + id + ".png"} alt={name}/>
                     </div>
                 </Grid>
                 <Grid item xs={12} sm container>

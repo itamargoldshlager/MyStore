@@ -1,5 +1,5 @@
 import React from 'react';
-import {createStyles, makeStyles, Theme, useTheme} from '@material-ui/core/styles';
+import {createStyles, makeStyles, Theme} from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Header from "./Components/MainPage/Header"
 import SideBarDrawer from "./Components/MainPage/SideBarDrawer";
@@ -27,7 +27,6 @@ const useStyles = makeStyles((theme: Theme) =>
 
 const MyStore: React.FC = () => {
     const classes = useStyles();
-    const theme = useTheme();
     const [open, setOpen] = React.useState(false);
 
     const handleDrawerOpen = () => {

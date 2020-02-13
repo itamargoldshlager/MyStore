@@ -1,6 +1,7 @@
 import React, {FC, useState, ChangeEvent} from 'react';
 import { TextField, Grid, makeStyles, Select, MenuItem, Button} from '@material-ui/core';
 import axios from 'axios';
+import {getUrl} from "../Products/FetchDataFromServer"
 
 const AddNewProductStyle = makeStyles({
     root: {
@@ -12,7 +13,7 @@ const AddNewProductStyle = makeStyles({
 const sendDataToServer = (image: File, id: string) => {
     const data = new FormData() 
     data.append('file', image)
-    axios.post("http://localhost:4000/api/product/add/" + id, data, { // receive two parameter endpoint url ,form data 
+    axios.post(getUrl() + "/api/product/add/" + id, data, { // receive two parameter endpoint url ,form data 
     })
     .then(res => { // then print response status
     console.log(res.statusText)
@@ -28,7 +29,7 @@ const sendProductData = (image: File, productName: string, productDescription: s
         productPrice: productPrice
     }
 
-    axios.post("http://localhost:4000/api/product/addProduct", data, {}).then(
+    axios.post(getUrl() + "/api/product/addProduct", data, {}).then(
         res => { // then print response status
             console.log(res)
             sendDataToServer(image, res.data)
@@ -103,16 +104,9 @@ const AddNewProduct: FC = () => {
                         name="file" 
                         onChange={(event: ChangeEvent<any>)=> setProductImageSrc(event.target.files[0])}/>
                     {
-                        productImgSrc !== undefined ? <img src={URL.createObjectURL(productImgSrc)}/> : <></>
+                        productImgSrc !== undefined ? <img src={URL.createObjectURL(productImgSrc)} alt="product"/> : <></>
                     }
                 </Grid>
-                    {/* <DropzoneArea 
-                        maxFileSize = {3145728}
-                        filesLimit= {1}
-                        onChange= {(files) => {
-                            setProductImageSrc(files)}
-                        }
-                    />       */}
             </Grid>
             <Button 
                 variant="contained" 
