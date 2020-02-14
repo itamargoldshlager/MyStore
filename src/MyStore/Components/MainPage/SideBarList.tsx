@@ -57,8 +57,8 @@ const SideBarList: FC = () => {
                 </ListItem>
 
                 <ListItem button>
-                    <ListItemIcon><Link to="/Storage" className="LinkStyle"><StorageIcon/></Link></ListItemIcon>
-                    <Link to="/Storage" className="LinkStyle"><ListItemText primary="Storage manage"/></Link>
+                    <ListItemIcon><Link to="/Store" className="LinkStyle"><StorageIcon/></Link></ListItemIcon>
+                    <Link to="/Store" className="LinkStyle"><ListItemText primary="Store manage"/></Link>
                 </ListItem>
             </List>
         </div>

@@ -1,12 +1,19 @@
-import React, { FC } from "react"
+import React, { FC, useState, useEffect} from "react"
 import GenericTable from "../GenericTable/GenericTable"
-import TableOrder from "../Products/ProductsTable"
+import OrdersTable from '../Orders/OrdersTable';
+import {fetchOrdersFromServer} from "../StoreManagment/ManageOrders"
+import { OrderProps } from "./OrderRow"
 
 const OrdersPage : FC = () => {
+    const [orders, setOrders] = useState<OrderProps[]>([])
+
+    useEffect(() => {
+        fetchOrdersFromServer(setOrders);
+    }, [])
     return (
         <GenericTable
-            rowComponent={TableOrder}
-            rows = {[]}
+            rows={orders}
+            rowComponent={OrdersTable}
         />
     )
 }

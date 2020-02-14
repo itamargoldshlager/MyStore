@@ -11,9 +11,10 @@ import TableProduct from './ProductsTable';
 const ProductByCategory: FC = () => {
     const [products, setProducts] = useState<ProductProps[]>([])
     let { category } = useParams();
+
     useEffect(() => {
-        FetchProductsbyCategory(category, (products: ProductProps[]) => setProducts(products))
-    }, [category])
+        FetchProductsbyCategory(category, (products: ProductProps[]) => setProducts((products))
+    )}, [category])
 
     return (
         <GenericTable

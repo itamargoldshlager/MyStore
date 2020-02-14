@@ -1,4 +1,4 @@
-import React, {FC} from 'react';
+import React, {FC, ChangeEvent} from 'react';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
@@ -14,6 +14,8 @@ export interface ProductProps {
     price: number,
     amount: number
     removeFromCart?: () => void
+    removeFromStore?: () => void
+    updateAmount?: (amount: number) => void
 }
 
 const SingleProductRow: FC<ProductProps> = (
@@ -23,10 +25,11 @@ const SingleProductRow: FC<ProductProps> = (
         description,
         price,
         amount,
-        removeFromCart
+        removeFromCart,
+        removeFromStore,
+        updateAmount
     }) => {
     const classes = useStyles();
-
     return (
         <div>
             <Paper className={classes.paper}>
@@ -64,6 +67,32 @@ const SingleProductRow: FC<ProductProps> = (
                                     remove
                                 </Button> :
                                 <></>
+                            }
+                            {
+                                removeFromStore !== undefined && updateAmount !== undefined ?
+                                    <div>
+                                        <div>
+                                            <Button 
+                                                variant="contained" 
+                                                color="secondary"
+                                                onClick= {() => removeFromStore()}
+                                            >
+                                            remove from store
+                                            </Button> 
+                                        </div>
+                                        <div>
+                                            amount in storage: 
+                                            <input 
+                                                type="number" 
+                                                name="quantity"
+                                                min="0" 
+                                                max="5" 
+                                                value={amount} 
+                                                onChange={(event: ChangeEvent<HTMLInputElement>) => updateAmount(Number(event.target.value))}
+                                            />
+                                        </div>
+                                    </div> :
+                                    <></>
                             }
                         </Grid>
                     </Grid>

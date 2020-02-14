@@ -4,11 +4,13 @@ import {
     Route,
 } from "react-router-dom";
 import Home from "../Home/Home";
-import StorageManagement from "../StorageManagment/StorageManagement"
+import StoreManagement from "../StoreManagment/StoreManagement"
 import ProductByCategory from '../Products/ProductByCategory'
 import OrderPage from '../Orders/OrdersPage';
 import ProductById from '../Products/ProductById'
 import ShoppingCart from '../ShoppingCart/ShoppingCart'
+import CheckOut from '../CheckOut/CheckOut'
+import ProductsByOrder from '../Products/ProductsByOrder';
 
 const RouterPage: FC = () => {
     return (
@@ -22,11 +24,17 @@ const RouterPage: FC = () => {
             <Route path="/orders/">
                 <OrderPage/>
             </Route>
+            <Route path="/productByOrder/:orderId">
+                <ProductsByOrder/>
+            </Route>
             <Route path="/shoppingcart">
                 <ShoppingCart/>
             </Route>
-            <Route path="/storage">
-                <StorageManagement/>
+            <Route path="/Store">
+                <StoreManagement/>
+            </Route>
+            <Route path="/CheckOut">
+                <CheckOut/>
             </Route>
             <Route path="/">
                 <Home/>

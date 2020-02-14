@@ -7,7 +7,7 @@ const OrdersTable: FC<{rows: OrderProps[] | any}> = ({rows}) => {
         <div className="App">
             {
                 rows.map((row: OrderProps) =>
-                    <TableRow key={row.date.getDate()}>
+                    <TableRow key={row.id}>
                         <SingleOrderRow {...row}/>
                     </TableRow>
                 )

@@ -41,6 +41,23 @@ export const FetchProductsIdFromShoppingCart = (callback: (products: ProductProp
     })
 }
 
+export const FetchProductbyOrder = (id: number, callback: (products: ProductProps[]) => void): void => {
+    axios.get(getUrl() + "/api/order/productsIds/" + id).then(
+        (res: {
+            data: {id: number, orderId: number, productId: number,amount:number}[]
+        }) => { // then print response status
+            let ids = ""
+            if (res.data.length !== 0) {
+                res.data.map(value => ids= ids + "," + value.productId)
+                ids = ids.substring(1);
+                console.log(ids)
+                FetchMultipleProductbyId(ids, callback);
+            } else {
+                callback([])
+            }
+    })
+}
+
 export const FetchMultipleProductbyId = (ids: string, callback: (products: ProductProps[]) => void) : void => {
     axios.get(getUrl() + "/api/product/mulitipleid/" + ids).then(
         res => { // then print response status
