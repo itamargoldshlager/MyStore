@@ -12,11 +12,19 @@ export interface ProductProps {
     name: string,
     description: string,
     price: number,
-    amount: number
+    amount: number,
+    image: Buffer
     removeFromCart?: () => void
     removeFromStore?: () => void
     updateAmount?: (amount: number) => void
 }
+
+const arrayBufferToBase64 = (buffer: any): any => {
+    var binary = '';
+    var bytes = [].slice.call(new Uint8Array(buffer.data));
+    bytes.forEach((b) => binary += String.fromCharCode(b));
+    return window.btoa(binary);
+};
 
 const SingleProductRow: FC<ProductProps> = (
     {
@@ -27,16 +35,20 @@ const SingleProductRow: FC<ProductProps> = (
         amount,
         removeFromCart,
         removeFromStore,
-        updateAmount
+        updateAmount,
+        image
     }) => {
     const classes = useStyles();
+    const base64Flag = 'data:image/jpeg;base64,';
+    const imageStr = arrayBufferToBase64(image);
+    const imgData = base64Flag + imageStr
     return (
         <div>
             <Paper className={classes.paper}>
                 <Grid container spacing={2}>
                     <Grid item>
                         <ButtonBase className={classes.image}>
-                            <img className={classes.img} src={"https://itamarandleestoreproject.s3.amazonaws.com/" + id + ".png"} alt={name}/>
+                            <img className={classes.img} src={imgData} alt={name}/>
                         </ButtonBase>
                     </Grid>
                     <Grid item xs={12} sm container>

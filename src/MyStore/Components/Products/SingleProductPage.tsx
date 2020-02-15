@@ -3,6 +3,7 @@ import {ProductProps} from "./ProductRow"
 import { Grid, Button } from '@material-ui/core';
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import axios from 'axios';
+import { getUrl } from './FetchDataFromServer';
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -34,20 +35,35 @@ const AddProductToShoppingCart = (productId: number) => {
         productId: productId,
     }
 
-    axios.post("http://localhost:4000/api/shoppingcart/addProduct", data, {}).then(
+    axios.post(getUrl() + "/api/shoppingcart/addProduct", data, {}).then(
         res => { // then print response status
             console.log(res)
     })
 }
 
-const SinglePage: FC<ProductProps> = ({id, name, description, amount, price}) => {
+const arrayBufferToBase64 = (buffer: any): any => {
+    var binary = '';
+    var bytes = [].slice.call(new Uint8Array(buffer.data));
+    bytes.forEach((b) => binary += String.fromCharCode(b));
+    return window.btoa(binary);
+};
+
+const SinglePage: FC<ProductProps> = ({id, name, description, amount, price, image}) => {
     const classes = useStyles();
+    const base64Flag = 'data:image/jpeg;base64,';
+    const imageStr = arrayBufferToBase64(image);
+    const imgData = base64Flag + imageStr
     return (
         <div className={classes.root}>
             <Grid className={classes.root} container spacing={2}>
+                {
+                    amount === 0 ?
+                    <h1>The product not available in the store</h1> :
+                    <></>
+                }
                 <Grid item>
                     <div className={classes.image}>
-                        <img className={classes.img} src={"https://itamarandleestoreproject.s3.amazonaws.com/" + id + ".png"} alt={name}/>
+                        <img className={classes.img} src={imgData} alt={name}/>
                     </div>
                 </Grid>
                 <Grid item xs={12} sm container>
@@ -61,6 +77,7 @@ const SinglePage: FC<ProductProps> = ({id, name, description, amount, price}) =>
                 <p className={classes.price}>Final price:${price}</p>
                 <Button 
                     className={classes.addToCart} 
+                    disabled={amount === 0}
                     color="primary" 
                     variant="contained"
                     onClick = {() => {

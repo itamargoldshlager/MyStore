@@ -2,10 +2,10 @@ import {ProductProps} from "./ProductRow"
 import axios from 'axios';
 
 export const getUrl = (): string => {
-    // const url = window.location.href
-    // const pathName = window.location.pathname
-    // return url.substring(0, url.length - pathName.length)
-    return "http://localhost:4000"
+    const url = window.location.href
+    const pathName = window.location.pathname
+    return url.substring(0, url.length - pathName.length)
+    // return "http://localhost:4000"
 }
 
 export const FetchProductsbyCategory = (category: string = "", callback: (products: ProductProps[]) => void): void => {
